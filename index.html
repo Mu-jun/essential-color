@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Color | 에센셜 컬러</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Essential Color</a>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#event">Event</a></li>
+          <li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Branding Your Image</h1>
+    <p>당신의 이미지를 브랜딩하세요.</p>
+    <a href="https://smore.im/form/GMA0cLS4NB" class="btn btn-secondary">Free trial</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container text-center">
+      <h2>About</h2>
+      <p>저희 컬러브랜딩 프로그램은 이미지브랜딩과 퍼스널컬러를 융합한 프로그램입니다.</p>
+      <p>총2회차 프로그램으로 진행이 되고, 1회차에는 이미지 브랜딩, 2회차에는 퍼스널 컬러가 진행이 됩니다.</p>
+    </div>
+  </section>
+
+  <!-- Event Section -->
+  <section id="event" class="section event">
+    <div class="container text-center">
+      <h2>Event</h2>
+      <p>현재 진행 중인 무료 체험 이벤트에 참여하고, 나만의 색을 찾아보세요!</p>
+      <a href="https://smore.im/form/GMA0cLS4NB" class="btn btn-secondary">이벤트 신청</a>
+    </div>
+  </section>
+
+  <!-- Review Section -->
+  <section id="review" class="section review">
+    <div class="container text-center">
+      <h2>Review</h2>
+      <p>고객들이 경험한 생생한 후기</p>
+      <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Review Image 1">
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Review Image 2">
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Review Image 3">
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Floating Navigation Button (모바일 전용) -->
+  <div class="floating-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Floating Menu -->
+  <div class="floating-menu" id="floatingMenu">
+    <a href="#about">About</a>
+    <a href="#event">Event</a>
+    <a href="#review">Review</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <p>© 2024 Essential Color.</p>
+    <p>
+      <a href="https://www.instagram.com/essential_color_official" target="_blank"
+        style="color: #fff; text-decoration: none;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+          style="width: 20px; height: 20px; vertical-align: middle;">
+        Follow us on Instagram
+      </a>
+    </p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

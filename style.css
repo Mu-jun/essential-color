@@ -1,0 +1,169 @@
+:root {
+  --primary-color: orange;
+}
+
+body {
+  /* font-family: 'MaruBuriExtraLight';
+  font-family: 'MaruBuriLight';
+  font-family: 'MaruBuri';
+  font-family: 'MaruBuriBold';
+  font-family: 'MaruBuriSemiBold'; */
+  color: black;
+  background-color: white;
+  scroll-behavior: smooth;
+  /* 부드러운 스크롤 */
+  line-height: 1.8;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 상단 네비게이션 */
+.navbar {
+  background: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: var(--primary-color) !important;
+  /* 포인트 색상 */
+}
+
+/* 항상 네비게이션 펼쳐진 상태 유지 */
+.navbar-collapse {
+  display: flex !important;
+  justify-content: flex-end;
+  flex-basis: auto;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* PC 전용 네비게이션 */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+  .floating-btn,
+  .floating-menu {
+    display: none; /* 플로팅 버튼 숨김 */
+  }
+}
+
+/* 모바일 전용 플로팅 네비게이션 */
+@media (max-width: 767px) {
+  .navbar {
+    display: none; /* 상단 고정 네비게이션 숨김 */
+  }
+  .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: #000;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .floating-menu {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    display: none; /* 기본적으로 숨김 */
+    z-index: 1000;
+  }
+  .floating-menu a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+  }
+  .floating-menu a:last-child {
+    border-bottom: none;
+  }
+  .floating-menu a:hover {
+    color: var(--primary-color);
+  }
+}
+
+/* 섹션 스타일 */
+.hero {
+  text-align: center;
+  padding: 150px 20px;
+  background: linear-gradient(135deg, white, gray);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.btn-custom {
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.btn-custom:hover {
+  background: #fff;
+  color: #000;
+}
+
+.section {
+  padding: 100px 20px;
+}
+
+.section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  padding: 20px;
+  border-radius: 10px;
+}
+.carousel-caption p {
+  margin: 0;
+}
+
+.footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  color: #666;
+}
