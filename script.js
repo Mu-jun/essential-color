@@ -1,30 +1,56 @@
+// 모바일용 플로팅 메뉴
 function toggleMenu() {
   const menu = document.getElementById('floatingMenu');
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
-const carousel = document.querySelector('#reviewCarousel');
-let startX, endX;
+const images = [
+  'image1.png',
+  'image2.png',
+  'image3.png',
+  'image4.png',
+  'image5.png',
+];
+let currentIndex = 0; // 현재 인덱스 (복제된 첫 이미지를 기준으로 1부터 시작)
 
-// Handle touchstart event
-carousel.addEventListener('touchstart', (event) => {
-  startX = event.touches[0].clientX;
-});
+const hereGallery = document.getElementById('here-gallery');
+hereGallery.addEventListener('wheel', (e) => {
+  e.preventDefault();
 
-// Handle touchend event
-carousel.addEventListener('touchend', (event) => {
-  endX = event.changedTouches[0].clientX;
-  handleSwipe();
-});
+  const tmp = hereGallery.scrollLeft;
+  hereGallery.scrollLeft += e.deltaY;
 
-function handleSwipe() {
-  if (startX - endX > 50) {
-    // Swipe left
-    const nextButton = carousel.querySelector('.carousel-control-next');
-    nextButton.click();
-  } else if (endX - startX > 50) {
-    // Swipe right
-    const prevButton = carousel.querySelector('.carousel-control-prev');
-    prevButton.click();
+  if (hereGallery.scrollLeft === tmp) {
+    window.scrollBy({ top: e.deltaY });
   }
-}
+});
+
+const personalColorGallery = document.getElementById('personal-color-system');
+personalColorGallery.addEventListener('wheel', (e) => {
+  e.preventDefault();
+
+  const tmp = personalColorGallery.scrollLeft;
+  personalColorGallery.scrollLeft += e.deltaY;
+
+  if (personalColorGallery.scrollLeft === tmp) {
+    window.scrollBy({ top: e.deltaY });
+  }
+});
+
+const imageBrandingGallery = document.getElementById('image-branding-gallery');
+imageBrandingGallery.addEventListener('wheel', (e) => {
+  e.preventDefault();
+
+  const tmp = imageBrandingGallery.scrollLeft;
+  imageBrandingGallery.scrollLeft += e.deltaY;
+
+  if (imageBrandingGallery.scrollLeft === tmp) {
+    window.scrollBy({ top: e.deltaY });
+  }
+});
+
+const moreReview = document.getElementById('more-review');
+const reviewReadMoreBtn = document.getElementById('review-read-more');
+reviewReadMoreBtn.addEventListener('click', () => {
+  moreReview.style.display = 'flex';
+});

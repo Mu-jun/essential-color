@@ -9,11 +9,11 @@ body {
   font-family: 'MaruBuriBold';
   font-family: 'MaruBuriSemiBold'; */
   color: black;
-  background-color: white;
+  background-color: #fffae7;
   scroll-behavior: smooth;
   /* 부드러운 스크롤 */
   line-height: 1.8;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
@@ -120,7 +120,8 @@ body {
 .hero {
   text-align: center;
   padding: 150px 20px;
-  background: linear-gradient(135deg, white, gray);
+  background: url('/img/removebg-preview.png') no-repeat center;
+  height: 550px;
 }
 
 .hero h1 {
@@ -145,8 +146,9 @@ body {
 }
 
 .section h2 {
-  color: var(--primary-color);
   margin-bottom: 20px;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid black;
 }
 
 .carousel-caption {
@@ -159,11 +161,55 @@ body {
 }
 
 .footer {
-  background: #000;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: #f24e1e;
   padding: 20px;
 }
 
+.footer div {
+  margin: auto;
+}
+
 .footer p {
-  color: #666;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* 갤러리 컨테이너 스타일 */
+.gallery-wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* 갤러리 리스트 스타일 */
+.gallery {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* 갤러리 아이템 스타일 */
+.gallery img {
+  list-style: none;
+  flex: none; /* 아이템이 줄어들지 않도록 설정 */
+  height: 200px; /* 고정 너비 설정 */
+  margin: 0 10px;
+}
+
+#more-review img {
+  width: 500px;
+  margin: 1rem auto;
+}
+
+.form-label {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.custom-form-control {
+  width: 100%;
+  box-shadow: 5px 5px black;
 }
