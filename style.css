@@ -14,7 +14,6 @@ body {
   /* 부드러운 스크롤 */
   line-height: 1.8;
   scrollbar-width: thin;
-  padding-top: 80px;
 }
 
 ::-webkit-scrollbar {
@@ -58,6 +57,9 @@ body {
 
 /* PC 전용 네비게이션 */
 @media (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
   .navbar {
     display: flex;
   }
