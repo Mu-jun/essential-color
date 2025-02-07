@@ -4,15 +4,6 @@ function toggleMenu() {
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
-const images = [
-  'image1.png',
-  'image2.png',
-  'image3.png',
-  'image4.png',
-  'image5.png',
-];
-let currentIndex = 0; // 현재 인덱스 (복제된 첫 이미지를 기준으로 1부터 시작)
-
 const hereGallery = document.getElementById('here-gallery');
 hereGallery.addEventListener('wheel', (e) => {
   e.preventDefault();
@@ -24,6 +15,11 @@ hereGallery.addEventListener('wheel', (e) => {
     window.scrollBy({ top: e.deltaY });
   }
 });
+setInterval(() => {
+  const tmp = hereGallery.scrollLeft;
+  hereGallery.scrollLeft += 1;
+  if (hereGallery.scrollLeft === tmp) hereGallery.scrollLeft = 0;
+}, 10);
 
 const personalColorGallery = document.getElementById('personal-color-system');
 personalColorGallery.addEventListener('wheel', (e) => {
@@ -36,6 +32,12 @@ personalColorGallery.addEventListener('wheel', (e) => {
     window.scrollBy({ top: e.deltaY });
   }
 });
+setInterval(() => {
+  const tmp = personalColorGallery.scrollLeft;
+  personalColorGallery.scrollLeft += 1;
+  if (personalColorGallery.scrollLeft === tmp)
+    personalColorGallery.scrollLeft = 0;
+}, 10);
 
 const imageBrandingGallery = document.getElementById('image-branding-gallery');
 imageBrandingGallery.addEventListener('wheel', (e) => {
@@ -48,6 +50,12 @@ imageBrandingGallery.addEventListener('wheel', (e) => {
     window.scrollBy({ top: e.deltaY });
   }
 });
+setInterval(() => {
+  const tmp = imageBrandingGallery.scrollLeft;
+  imageBrandingGallery.scrollLeft += 1;
+  if (imageBrandingGallery.scrollLeft === tmp)
+    imageBrandingGallery.scrollLeft = 0;
+}, 10);
 
 const moreReview = document.getElementById('more-review');
 const reviewReadMoreBtn = document.getElementById('review-read-more');
