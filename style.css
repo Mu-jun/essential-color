@@ -22,18 +22,19 @@ body {
 
 /* 상단 네비게이션 */
 .navbar {
-  background: #000;
-  position: fixed;
-  top: 0;
+  /* background: #000; */
+  position: absolute;
+  top: 65px;
+  left: 95px;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #333; */
   padding: 10px 0;
 }
 
 .navbar-brand,
 .nav-link {
-  color: #fff !important;
+  color: #000 !important;
   font-weight: bold;
 }
 
@@ -51,8 +52,13 @@ body {
 }
 
 .navbar-nav {
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.nav-item {
+  font-size: 1.5rem;
+  height: 2rem;
 }
 
 /* PC 전용 네비게이션 */
@@ -125,7 +131,7 @@ body {
   padding: 150px 20px;
   background: url('./img/removebg-preview.png') no-repeat center;
   background-size: contain;
-  height: 550px;
+  height: 30vw;
 }
 
 .hero h1 {
@@ -199,8 +205,19 @@ body {
 .gallery img {
   list-style: none;
   flex: none; /* 아이템이 줄어들지 않도록 설정 */
-  height: 200px; /* 고정 너비 설정 */
+  /* height: 200px; */
   margin: 0 10px;
+}
+#here-gallery img {
+  height: calc(0.2 * 100vw + 70px);
+}
+
+#personal-color-system img {
+  height: 200px;
+}
+
+#image-branding-gallery img {
+  width: 20vw;
 }
 
 #more-review img {

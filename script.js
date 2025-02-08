@@ -50,12 +50,6 @@ imageBrandingGallery.addEventListener('wheel', (e) => {
     window.scrollBy({ top: e.deltaY });
   }
 });
-setInterval(() => {
-  const tmp = imageBrandingGallery.scrollLeft;
-  imageBrandingGallery.scrollLeft += 1;
-  if (imageBrandingGallery.scrollLeft === tmp)
-    imageBrandingGallery.scrollLeft = 0;
-}, 10);
 
 const moreReview = document.getElementById('more-review');
 const reviewReadMoreBtn = document.getElementById('review-read-more');
