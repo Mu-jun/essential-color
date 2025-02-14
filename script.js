@@ -56,3 +56,23 @@ const reviewReadMoreBtn = document.getElementById('review-read-more');
 reviewReadMoreBtn.addEventListener('click', () => {
   moreReview.style.display = 'flex';
 });
+
+function checkBanner() {
+  const key = 'bottom-banner:' + new Date().toLocaleDateString();
+  const isVisibleBanner = localStorage.getItem(key);
+  if (isVisibleBanner === 'off') {
+    document.getElementById('bottom-banner').classList.add('close');
+  } else {
+    document.getElementById('bottom-banner').classList.add('active');
+  }
+}
+
+checkBanner();
+
+const bottomBannerCloseBtn = document.getElementById('bottom-banner-close');
+bottomBannerCloseBtn.addEventListener('click', () => {
+  const key = 'bottom-banner:' + new Date().toLocaleDateString();
+  // document.getElementById('bottom-banner').classList.add('close');
+  localStorage.setItem(key, 'off');
+  checkBanner();
+});

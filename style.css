@@ -234,3 +234,40 @@ body {
   width: 100%;
   box-shadow: 5px 5px black;
 }
+
+/* 하단 배너 */
+#bottom-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #fffae7;
+  border: 1px solid;
+}
+#bottom-banner.active {
+  display: block;
+  animation: slider 1s;
+}
+#bottom-banner.close {
+  display: block;
+  bottom: -100%;
+  transition: ease 1s;
+}
+@keyframes slider {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1120px) {
+  .bottom-banner-body {
+    flex-wrap: wrap;
+  }
+}
+
+#bottom-banner-close {
+  cursor: pointer;
+}
