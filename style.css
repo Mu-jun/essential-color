@@ -271,3 +271,7 @@ body {
 #bottom-banner-close {
   cursor: pointer;
 }
+
+.sale-ticket {
+  max-width: 80%;
+}
