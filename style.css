@@ -198,7 +198,6 @@ body {
 /* 갤러리 리스트 스타일 */
 .gallery {
   display: flex;
-  margin: 0 auto;
 }
 
 /* 갤러리 아이템 스타일 */
@@ -217,7 +216,7 @@ body {
 }
 
 #image-branding-gallery img {
-  width: 20vw;
+  width: 19%;
 }
 
 #more-review img {
