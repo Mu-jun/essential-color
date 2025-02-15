@@ -250,7 +250,7 @@ body {
 }
 #bottom-banner.close {
   display: block;
-  bottom: -100%;
+  top: 100%;
   transition: ease 1s;
 }
 @keyframes slider {
