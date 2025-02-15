@@ -26,7 +26,7 @@ body {
   position: absolute;
   top: 65px;
   left: 95px;
-  width: 100%;
+  width: 50%;
   z-index: 1000;
   /* border-bottom: 1px solid #333; */
   padding: 10px 0;
@@ -221,6 +221,7 @@ body {
 
 #more-review img {
   width: 500px;
+  max-width: 80vw;
   margin: 1rem auto;
 }
 
